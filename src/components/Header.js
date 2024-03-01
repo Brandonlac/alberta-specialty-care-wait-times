@@ -16,6 +16,7 @@ const Header = ({ navigation }) => {
         setSelected(screenName);
         navigation.navigate(screenName);
     };
+
     return (
         <View style={styles.container}>
             <TouchableOpacity

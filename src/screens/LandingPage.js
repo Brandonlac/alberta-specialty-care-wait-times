@@ -16,7 +16,8 @@ import {
     faSearch,
     faFile,
 } from "@fortawesome/free-solid-svg-icons";
-import WaitingTimes from "./WaitingTimes";
+
+import ProcedurePage from "./ProcedurePage";
 
 const LandingPage = ({ navigation }) => {
     return (
@@ -69,7 +70,7 @@ const LandingPage = ({ navigation }) => {
                     <FontAwesomeIcon icon={faX} size={30} />
                 </TouchableOpacity>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate("WaitingTimes")}
+                    onPress={() => navigation.navigate("ProcedurePage")}
                     style={styles.button}
                 >
                     <FontAwesomeIcon icon={faTruckMedical} size={30} />
@@ -90,12 +91,12 @@ const styles = StyleSheet.create({
         justifyContent: "justify-between",
         backgroundColor: "#fff",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "justify-between",
         margin: 10,
     },
     row: {
         flexDirection: "row",
-        justifyContent: "justify-between",
+        justifyContent: "center",
     },
     button: {
         backgroundColor: "lightblue",
@@ -109,21 +110,22 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         width: "50%",
         alignItems: "center",
+        marginBottom: 20,
     },
     infoRight: {
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "left",
         marginLeft: 10,
-        borderColor: "black",
         width: "50%",
+        marginBottom: 20,
     },
     userIconContainer: {
         width: 100,
         height: 100,
         borderRadius: 1, // Border radius to create a square shape
         borderWidth: 1, // Border width
-        borderColor: "black", // Border color
+        borderColor: "gray", // Border color
         justifyContent: "center",
         alignItems: "center",
     },
@@ -133,14 +135,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "left",
         borderWidth: 1,
-        borderColor: "light gray",
+        borderColor: "#d3d3d3",
         borderRadius: 5,
         marginBottom: 5,
     },
 
     searchContainer: {
         borderWidth: 1,
-        borderColor: "light gray",
+        borderColor: "#d3d3d3",
         borderRadius: 5,
         height: 40,
     },
