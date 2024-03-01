@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, Platform, TouchableOpacity, StatusBar } from 'react-native';
 import Slider from '@react-native-community/slider';
 import Checkbox from 'expo-checkbox';
 import Navbar from './Navbar';
@@ -39,7 +39,7 @@ const SliderWithCustomRadioButtons = () => {
         minimumTrackTintColor={sliderValue > 5 ? 'red' : 'green'}
       />
       <Text>Urgency: {sliderValue}</Text>
-      <SafeAreaView style={styles.radioContainer}>
+      <View style={styles.radioContainer}>
         {radioButtons.map((button) => (
           <TouchableOpacity
             key={button.value}
@@ -52,8 +52,8 @@ const SliderWithCustomRadioButtons = () => {
             <Text style={styles.radioText}>{button.label}</Text>
           </TouchableOpacity>
         ))}
-      </SafeAreaView>
-      <SafeAreaView style={styles.checkboxContainer}>
+      </View>
+      <View style={styles.checkboxContainer}>
         <Checkbox
           value={emergencyChecked}
           onValueChange={setEmergencyChecked}
@@ -61,7 +61,7 @@ const SliderWithCustomRadioButtons = () => {
         <Text style={styles.checkboxLabel}>
           If this is an emergency call 911 immediately
         </Text>
-      </SafeAreaView>
+      </View>
     </SafeAreaView>
   );
 };
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // Add padding 
   },
   slider: {
     width: 300,
