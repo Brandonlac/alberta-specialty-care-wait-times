@@ -3,6 +3,7 @@ import { SafeAreaView, View, Text, StyleSheet, Platform, TouchableOpacity, Statu
 import Slider from '@react-native-community/slider';
 import Checkbox from 'expo-checkbox';
 import Navbar from './Navbar';
+import Header from './Header';
 
 const SliderWithCustomRadioButtons = () => {
   const [sliderValue, setSliderValue] = useState(5);
@@ -27,8 +28,8 @@ const SliderWithCustomRadioButtons = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Navbar/>
-      <Text>Please rate your urgency from 1-10.</Text>
+      <Header/>
+      <Text style={styles.bigText}>Please rate your urgency from 1-10.</Text>
       <Slider
         style={styles.slider}
         minimumValue={1}
@@ -38,7 +39,7 @@ const SliderWithCustomRadioButtons = () => {
         onValueChange={handleSliderChange}
         minimumTrackTintColor={sliderValue > 5 ? 'red' : 'green'}
       />
-      <Text>Urgency: {sliderValue}</Text>
+      <Text style={styles.bigText} >Urgency: {sliderValue}</Text>
       <View style={styles.radioContainer}>
         {radioButtons.map((button) => (
           <TouchableOpacity
@@ -71,8 +72,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // Add padding 
-    backgroundColor: '#ADD8E6', // Add this line to change the background color
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // Add padding
+    backgroundColor: 'lightblue'
   },
   slider: {
     width: 300,
@@ -103,6 +104,9 @@ const styles = StyleSheet.create({
   },
   radioText: {
     marginLeft: 8,
+  },
+  bigText: {
+    fontSize: 20,
   },
 });
 
