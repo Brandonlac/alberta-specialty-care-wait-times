@@ -26,26 +26,32 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import LandingPage from "./src/screens/LandingPage";
-// import Screen1 from "./src/screens/Screen1";
-// import Screen2 from "./src/screens/Screen2";
-// import Screen3 from "./src/screens/Screen3";
-// import Screen4 from "./src/screens/Screen4";
+import WaitingTimes from "./src/screens/WaitingTimes";
 
 const Stack = createStackNavigator();
 
 export default function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="LandingPage">
+            <Stack.Navigator>
                 <Stack.Screen
                     name="LandingPage"
                     component={LandingPage}
-                    options={{ headerShown: false }}
+                    // options={{ headerShown: false }}
+                    options={{
+                        title: "Alberta Health Records",
+                        headerStyle: {
+                            backgroundColor: "#fff", // Set the background color of the header
+                            elevation: 0, // Remove shadow on Android
+                            shadowOpacity: 0, // Remove shadow on iOS
+                            borderBottomWidth: 0, // Remove border at the bottom of the header
+                        },
+                        headerTitleStyle: {
+                            fontSize: 24, // Set the font size of the header title
+                        },
+                    }}
                 />
-                {/* <Stack.Screen name="Screen1" component={Screen1} />
-                <Stack.Screen name="Screen2" component={Screen2} />
-                <Stack.Screen name="Screen3" component={Screen3} />
-                <Stack.Screen name="Screen4" component={Screen4} /> */}
+                <Stack.Screen name="WaitingTimes" component={WaitingTimes} />
             </Stack.Navigator>
         </NavigationContainer>
     );
