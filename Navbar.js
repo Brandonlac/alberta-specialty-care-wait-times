@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   navbarContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between', // This will distribute the buttons evenly
-    backgroundColor: 'purple',
+    backgroundColor: 'red',
     borderBottomWidth: 1,
     borderBottomColor: '#e7e7e7',
     paddingVertical: 10,
@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
   },
   navButtonText: {
     fontSize: 16,
-    color: '#000000',
-  },
+    color: 'white',
+  }
 });
 
 export default Navbar;

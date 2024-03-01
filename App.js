@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // Add padding 
+    backgroundColor: '#ADD8E6', // Add this line to change the background color
   },
   slider: {
     width: 300,
