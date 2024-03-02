@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, Button, StyleSheet, Alert } from 'react-native';
+import { View, Button, StyleSheet, Alert, Text } from 'react-native';
 
 const SpecialtyCareScreen = ({ route }) => {
-  const { doctorsData, selectedProcedure, selectedZone, selectedClinic, doctorName } = route.params;
+  const { clinicAddress, clinicName, procedure, selectedZone, selectedClinic, doctorName, sliderValue } = route.params;
 
   const handleCheckWaitingTime = () => {
     const waitingTime = calculateWaitingTime();
@@ -16,6 +16,11 @@ const SpecialtyCareScreen = ({ route }) => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.infoText}>Procedure: {procedure}</Text>
+      <Text style={styles.infoText}>Clinic Name: {clinicName}</Text>
+      <Text style={styles.infoText}>Clinic Address: {clinicAddress}</Text>
+      <Text style={styles.infoText}>Doctor Name: {doctorName}</Text>
+      <Text style={styles.infoText}>Urgency Level: {sliderValue}</Text>
       <Button title="Check Waiting Time" onPress={handleCheckWaitingTime} />
     </View>
   );
