@@ -1,0 +1,74 @@
+{
+    "upperHead": [
+        "Cataract Surgery 1st Eye Only",
+        "Interventions on the Brain and Spinal Cord",
+        "Interventions on the Eyelid",
+        "Other Interventions on the Eye"
+    ],
+    "lowerHead": [
+        "Interventions on the Nose and Nasal Cartilage",
+        "Other Interventions on the Ear",
+        "Other Interventions on the Mouth and Throat",
+        "Other: Head, Nasal Cavity and Sinuses",
+        "Tonsillectomy",
+        "Tubes in the Ears"
+    ],
+    "shoulder": ["Interventions on the Shoulder"],
+    "heart": [
+        "Coronary Artery Bypass Graft (CABG)",
+        "Heart Valve Surgery",
+        "Implantation of Pacemaker and Other Devices",
+        "Interventions on the Primary Blood Vessels",
+        "Other: Heart and Related Structures",
+        "Other: Upper Body Blood Vessels"
+    ],
+    "chest": [
+        "Interventions on the Respiratory System",
+        "Mastectomy: Removal of Breast",
+        "Other Interventions on the Breast",
+        "Spinal Vertebrae, Discs and Muscles of the Back"
+    ],
+    "elbow": ["Interventions on the Arm and Elbow"],
+    "wrist": ["Carpal Tunnel Release", "Interventions on the Hand and Wrist"],
+    "stomach": [
+        "Gall Bladder Removal",
+        "Hernia Repair",
+        "Interventions on the Large Intestine",
+        "Interventions on the Small Intestine",
+        "Interventions on the Stomach",
+        "Other Interventions on the Digestive System ",
+        "Other: Liver, Spleen, Pancreas and Gall Bladder"
+    ],
+    "genitals": [
+        "Hysterectomy",
+        "Interventions on the Urinary Bladder",
+        "Interventions on the Urinary System",
+        "Interventions on the Vagina",
+        "Muscles and Bones of the Trunk and Pelvis",
+        "Other Interventions on the Female Genital Tract",
+        "Other Interventions on the Male Genital System",
+        "Other: Lower Body Blood Vessels",
+        "Prostate Surgery",
+        "Tubal Ligation for Sterilization"
+    ],
+    "hip": [
+        "Hip Replacement Surgery",
+        "Interventions on the Lower Leg",
+        "Other Interventios on the Hip and Thigh",
+        "Varicose Vein(Leg) Surgery"
+    ],
+    "knee": [
+        "Knee Arthroscopy",
+        "Knee Replacement Surgery",
+        "Other Interventions on the Knee"
+    ],
+    "foot": ["Interventions on the Ankle and Foot"],
+    "other": [
+        "Cancer Services",
+        "CT Scans",
+        "Interventions on Lymph Nodes",
+        "MRI Scans",
+        "Other Interventions on the Nerves",
+        "Therapeutic Interventions on the Skin"
+    ]
+}
