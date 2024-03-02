@@ -14,11 +14,13 @@ import Icon from "react-native-vector-icons/MaterialIcons"; // Import Icon
 import MyReferralPage2 from "./MyReferralPage2";
 
 const referrals = [
-  { year: "2021", name: "Dr. Meredith Grey" },
-  { year: "2022", name: "Dr. Derek Shepherd" },
-  { year: "2023", name: "Dr. Cristina Yang" },
-  { year: "2024", name: "Dr. Miranda Bailey" },
-];
+    { date: "January 1, 2021", year: "2021", name: "Dr. Meredith Grey", status: "Accepted", statusDate: "January 15, 2021" },
+    { date: "February 1, 2022", year: "2022", name: "Dr. Derek Shepherd", status: "Denied" },
+    { date: "March 1, 2023", year: "2023", name: "Dr. Cristina Yang", status: "Accepted", statusDate: "March 20, 2023" },
+    { date: "April 1, 2024", year: "2024", name: "Dr. Miranda Bailey", status: "Accepted", statusDate: "April 10, 2024" },
+  ];
+  
+  
 
 const MyReferralPage = ({ navigation }) => {
   const [startYear, setStartYear] = useState("2020");
@@ -107,6 +109,8 @@ const MyReferralPage = ({ navigation }) => {
         />
       </Modal>
 
+
+      {/* { date: "April 1, 2024", year: "2024", name: "Dr. Miranda Bailey", status: "Accepted", statusDate: "April 10, 2024" }, */}
       <FlatList
         data={filteredReferrals}
         keyExtractor={(item, index) => `${item.year}-${item.name}-${index}`}
@@ -114,8 +118,11 @@ const MyReferralPage = ({ navigation }) => {
           <TouchableOpacity
             onPress={() =>
               navigation.navigate("MyReferralPage2", {
+                date: item.date,
                 year: item.year,
                 name: item.name,
+                status: item.status,
+                statusDate: item.statusDate,
               })
             }
           >
