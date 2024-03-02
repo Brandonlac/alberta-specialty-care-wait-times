@@ -11,6 +11,7 @@ import {
   Touchable,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons"; // Import Icon
+import MyReferralPage2 from "./MyReferralPage2";
 
 const referrals = [
   { year: "2021", name: "Dr. Meredith Grey" },
@@ -108,11 +109,20 @@ const MyReferralPage = ({ navigation }) => {
 
       <FlatList
         data={filteredReferrals}
-        keyExtractor={(item, index) => item.name + index}
+        keyExtractor={(item, index) => `${item.year}-${item.name}-${index}`}
         renderItem={({ item }) => (
-          <Text style={styles.referralItem}>
-            Your Referral for {item.year}: Given by {item.name}
-          </Text>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("MyReferralPage2", {
+                year: item.year,
+                name: item.name,
+              })
+            }
+          >
+            <Text style={styles.referralItem}>
+              Your Referral for {item.year}: Given by {item.name}
+            </Text>
+          </TouchableOpacity>
         )}
       />
     </View>
