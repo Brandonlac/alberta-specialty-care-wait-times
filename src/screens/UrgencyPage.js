@@ -106,10 +106,10 @@ const UrgencyPage = ({ route }) => {
 
     useEffect(() => {
         // Log the parameters to the console when the component mounts
-        console.log('Procedure:', route.params.procedure);
-        console.log('Clinic Name:', route.params.clinicName);
-        console.log('Clinic Address:', route.params.clinicAddress);
-        console.log('Doctor Name:', route.params.doctorName);
+        console.log('Procedure:', route.params?.procedure);
+        console.log('Clinic Name:', route.params?.clinicName);
+        console.log('Clinic Address:', route.params?.clinicAddress);
+        console.log('Doctor Name:', route.params?.doctorName);
     }, []); // Empty dependency array ensures that this effect runs only once when the component mounts
 
     return (
