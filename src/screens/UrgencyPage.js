@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import Slider from '@react-native-community/slider';
 import Checkbox from 'expo-checkbox';
+import { useNavigation } from '@react-navigation/native';
+import { Picker } from '@react-native-picker/picker';
+
+
 import {
     SafeAreaView,
     View,
@@ -16,6 +20,7 @@ import {
 const { width } = Dimensions.get('window');
 
 const SliderWithCustomRadioButtons = () => {
+    const navigation = useNavigation();
     const [sliderValue, setSliderValue] = useState(5);
     const [selectedValue, setSelectedValue] = useState('5');
     const [emergencyChecked, setEmergencyChecked] = useState(false);
@@ -71,6 +76,20 @@ const SliderWithCustomRadioButtons = () => {
                 <Text style={styles.checkboxLabel}>
                     If this is an emergency call 911 immediately
                 </Text>
+            </View>
+            <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                    style={styles.button} // Make sure to define this style
+                    onPress={() => navigation.goBack()}
+                >
+                    <Text>Back</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.button} // Make sure to define this style
+                    onPress={() => navigation.navigate("SpecialistPage")}
+                >
+                    <Text>Next</Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     );
@@ -150,4 +169,19 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start', // Center children vertically within the row
         marginTop: 20,
     },
+    button: {
+        borderWidth: 2,
+        borderColor: '#000',
+        backgroundColor: '#fff',
+        borderRadius: 5,
+        paddingHorizontal: 20, // Horizontal padding
+        paddingVertical: 10, // Vertical padding
+    },
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        width: '100%',
+        marginTop: 30,
+
+    }
 });
