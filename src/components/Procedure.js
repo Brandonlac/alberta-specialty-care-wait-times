@@ -168,7 +168,7 @@ const Procedure = ({ navigation }) => {
         { x: 135, y: 345, data: hip },
         { x: 200, y: 395, data: knee },
         { x: 220, y: 470, data: foot },
-        { x: 300, y: 500, data: other },
+        { x: 300, y: 501, data: other },
     ]);
 
     const handleCirclePress = (position, index) => {
@@ -190,7 +190,7 @@ const Procedure = ({ navigation }) => {
                     style={styles.caretIcon}
                 />
             </TouchableOpacity>
-            {showDropdown && (
+            {showDropdown && selectedCircle !== null && (
                 <ScrollView style={styles.dropdownList}>
                     {data.map((item) => (
                         <TouchableOpacity
