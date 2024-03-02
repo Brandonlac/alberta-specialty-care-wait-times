@@ -23,6 +23,7 @@ import UrgencyPage from "./UrgencyPage";
 const LandingPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
+            <Text style={styles.text}>Alberta Health Records</Text>
             <View style={styles.row}>
                 <View style={styles.infoLeft}>
                     <View style={styles.userIconContainer}>
@@ -64,7 +65,8 @@ const LandingPage = ({ navigation }) => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={() => navigation.navigate("UrgencyPage")}
-                    style={styles.button}>
+                    style={styles.button}
+                >
                     <FontAwesomeIcon icon={faX} size={30} />
                 </TouchableOpacity>
             </View>
@@ -142,7 +144,11 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 5,
     },
-
+    text: {
+        fontSize: 24,
+        fontWeight: "bold",
+        paddingTop: 20,
+    },
     searchContainer: {
         borderWidth: 1,
         borderColor: "#d3d3d3",
