@@ -7,15 +7,21 @@ import {
     faHouseUser,
     faSquareH,
     faEnvelope,
+    faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Header = ({navigation}) => {
+const Header = ({ navigation }) => {
     const [selected, setSelected] = useState(null);
 
     const handlePress = (screenName) => {
         setSelected(screenName);
         navigation.navigate(screenName);
     };
+
+    const handleBackPress = () => {
+        navigation.navigate("LandingPage"); // Navigate to the Landing page
+    };
+
     useEffect(() => {
         const unsubscribe = navigation.addListener("state", (e) => {
             const currentRoute = e.data.state.routes[e.data.state.index];
@@ -26,6 +32,10 @@ const Header = ({navigation}) => {
 
     return (
         <View style={styles.container}>
+            <TouchableOpacity onPress={handleBackPress} style={styles.button}>
+                <FontAwesomeIcon icon={faArrowLeft} size={30} />
+                <Text>Back</Text>
+            </TouchableOpacity>
             <TouchableOpacity
                 // onPress={() => navigation.navigate("Procedure")}
                 onPress={() => handlePress("ProcedurePage")}
@@ -81,13 +91,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: "100%",
         height: 60,
-        marginTop: 20,
+        marginTop: 55,
+        paddingBottom: 10,
     },
     button: {
         padding: 10,
         alignItems: "center",
-        marginTop: 10,
-        marginBottom: 10,
     },
     selectedButton: {
         backgroundColor: "lightblue",
