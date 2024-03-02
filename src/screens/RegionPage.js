@@ -17,53 +17,53 @@ const zonesData = [
     {
       name: 'North Zone',
       clinics: [
-        { name: 'Cold Lake Healthcare Centre', procedures: ['Procedure2', 'Procedure3', 'Procedure6'], address: '314 25 St, Cold Lake, AB T9M 0E3' },
-        { name: 'Hinton Healthcare Centre', procedures: ['Procedure2', 'Procedure3'], address: '1280 Switzer Dr, Hinton, AB T7V 1V2' },
-        { name: 'Northern Lights Regional Health Centre (Ft. McMurray)', procedures: ['Procedure2', 'Procedure3'], address: '7 Hospital St, Fort McMurray, AB T9H 1P2' },
-        { name: 'Westlock Healthcare Centre', procedures: ['Procedure2', 'Procedure3'], address: '10220 93 St, Westlock, AB T7P 2G4' },
-        { name: 'Barrhead Healthcare Centre', procedures: ['Procedure2', 'Procedure3'], address: '4815 51 Ave, Barrhead, AB T7N 1M1' },
-        { name: 'Queen Elizabeth II Hospital (Grande Prairie)', procedures: ['Procedure2', 'Procedure3'], address: '10409 98 St, Grande Prairie, AB T8V 2E8' },
+        { name: 'Cold Lake Healthcare Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal", "Carpal Tunnel Release"], address: '314 25 St, Cold Lake, AB T9M 0E3' },
+        { name: 'Hinton Healthcare Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '1280 Switzer Dr, Hinton, AB T7V 1V2' },
+        { name: 'Northern Lights Regional Health Centre (Ft. McMurray)', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '7 Hospital St, Fort McMurray, AB T9H 1P2' },
+        { name: 'Westlock Healthcare Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '10220 93 St, Westlock, AB T7P 2G4' },
+        { name: 'Barrhead Healthcare Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '4815 51 Ave, Barrhead, AB T7N 1M1' },
+        { name: 'Queen Elizabeth II Hospital (Grande Prairie)', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '10409 98 St, Grande Prairie, AB T8V 2E8' },
       ],
     },
     {
       name: 'Edmonton Zone',
       clinics: [
-        { name: 'Fort Saskatchewn Health Centre', procedures: ['Procedure1', 'Procedure2', 'Procedure6'], address: '9401 86 Ave, Fort Saskatchewan, AB T8L 0C6' },
-        { name: 'Sturgeon Community Hospital (St. Albert)', procedures: ['Procedure1', 'Procedure2'], address: '201 Boudreau Rd, St. Albert, AB T8N 6C4' },
-        { name: 'Leduc Community Hospital', procedures: ['Procedure1', 'Procedure2'], address: '4210 48 St, Leduc, AB T9E 5Z3' },
-        { name: 'University of Alberta Hospital (Edmonton)', procedures: ['Procedure1', 'Procedure2'], address: '8440 112 St NW, Edmonton, AB T6G 2B7' },
-        { name: 'Royal Alexandra Hospital (Edmonton)', procedures: ['Procedure1', 'Procedure2'], address: '10240 Kingsway NW, Edmonton, AB T5H 3V9' },
-        { name: 'Grey Nuns Community Hospital (Edmonton)', procedures: ['Procedure1', 'Procedure2'], address: '1100 Youville Dr W Northwest, Edmonton, AB T6L 5X8' },
+        { name: 'Fort Saskatchewn Health Centre', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery", "Carpal Tunnel Release"], address: '9401 86 Ave, Fort Saskatchewan, AB T8L 0C6' },
+        { name: 'Sturgeon Community Hospital (St. Albert)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '201 Boudreau Rd, St. Albert, AB T8N 6C4' },
+        { name: 'Leduc Community Hospital', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '4210 48 St, Leduc, AB T9E 5Z3' },
+        { name: 'University of Alberta Hospital (Edmonton)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '8440 112 St NW, Edmonton, AB T6G 2B7' },
+        { name: 'Royal Alexandra Hospital (Edmonton)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '10240 Kingsway NW, Edmonton, AB T5H 3V9' },
+        { name: 'Grey Nuns Community Hospital (Edmonton)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '1100 Youville Dr W Northwest, Edmonton, AB T6L 5X8' },
       ],
     },
     {
       name: 'Central Zone',
       clinics: [
-        { name: 'Red Deer Regional Hospital Centre', procedures: ['Procedure2', 'Procedure3', 'Procedure6'], address: '3942 50a Ave, Red Deer, AB T4N 4E7' },
-        { name: 'Olds Hospital and Care Centre', procedures: ['Procedure2', 'Procedure3'], address: '3901 57 Ave, Olds, AB T4H 1T4' },
-        { name: "St. Mary's Hospital (Camrose)", procedures: ['Procedure2', 'Procedure3'], address: '4607 53 St, Camrose, AB T4V 1Y5' },
-        { name: 'Viking Health Centre', procedures: ['Procedure2', 'Procedure3'], address: '5110 57 Ave, Viking, AB T0B 4N0' },
-        { name: 'Vermillon Health Centre', procedures: ['Procedure2', 'Procedure3'], address: '5720 50 Ave, Vermilion, AB T9X 1K7' },
-        { name: 'Provost Health Centre', procedures: ['Procedure2', 'Procedure3'], address: '5002 54 Ave, Provost, AB T0B 3S0' },
-        { name: 'Drumheller Health Centre', procedures: ['Procedure2', 'Procedure3'], address: '351 9 St NW, Drumheller, AB T0J 0Y1' },
+        { name: 'Red Deer Regional Hospital Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal", "Carpal Tunnel Release"], address: '3942 50a Ave, Red Deer, AB T4N 4E7' },
+        { name: 'Olds Hospital and Care Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '3901 57 Ave, Olds, AB T4H 1T4' },
+        { name: "St. Mary's Hospital (Camrose)", procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '4607 53 St, Camrose, AB T4V 1Y5' },
+        { name: 'Viking Health Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '5110 57 Ave, Viking, AB T0B 4N0' },
+        { name: 'Vermillon Health Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '5720 50 Ave, Vermilion, AB T9X 1K7' },
+        { name: 'Provost Health Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '5002 54 Ave, Provost, AB T0B 3S0' },
+        { name: 'Drumheller Health Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '351 9 St NW, Drumheller, AB T0J 0Y1' },
       ],
     },
     {
       name: 'Calgary Zone',
       clinics: [
-        { name: 'Mineral Springs Hospital (Banff)', procedures: ['Procedure1', 'Procedure2', 'Procedure6'], address: '305 Lynx St, Banff, AB T1L 1H7' },
-        { name: 'Canmore General Hospital', procedures: ['Procedure1', 'Procedure2'], address: '1100 Hospital Pl, Canmore, AB T1W 1N2' },
-        { name: 'Peter Lougheed Centre (Calgary)', procedures: ['Procedure1', 'Procedure2'], address: '3500 26 Ave NE, Calgary, AB T1Y 6J4' },
-        { name: 'Rockyview General Hospital (Calgary)', procedures: ['Procedure1', 'Procedure2'], address: '7007 14 St SW, Calgary, AB T2V 1P9' },
-        { name: 'Foothills Medical Centre (Calgary)', procedures: ['Procedure1', 'Procedure2'], address: '1403 29 St NW, Calgary, AB T2N 2T9' },
+        { name: 'Mineral Springs Hospital (Banff)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery", "Carpal Tunnel Release"], address: '305 Lynx St, Banff, AB T1L 1H7' },
+        { name: 'Canmore General Hospital', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '1100 Hospital Pl, Canmore, AB T1W 1N2' },
+        { name: 'Peter Lougheed Centre (Calgary)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '3500 26 Ave NE, Calgary, AB T1Y 6J4' },
+        { name: 'Rockyview General Hospital (Calgary)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '7007 14 St SW, Calgary, AB T2V 1P9' },
+        { name: 'Foothills Medical Centre (Calgary)', procedures: ["Heart Valve Surgery", "Hip Replacement Surgery"], address: '1403 29 St NW, Calgary, AB T2N 2T9' },
       ],
     },
     {
       name: 'South Zone',
       clinics: [
-        { name: 'Medicine Hat Regional Hospital', procedures: ['Procedure2', 'Procedure3', 'Procedure6'], address: '666 5 St SW, Medicine Hat, AB T1A 4H6' },
-        { name: 'Brooks Health Centre', procedures: ['Procedure2', 'Procedure3'], address: '440 3 St E, Brooks, AB T1R 1B3' },
-        { name: 'Chinook Regional Hospital (Lethbridge)', procedures: ['Procedure4'], address: '960 19 St S, Lethbridge, AB T1J 1W5' },
+        { name: 'Medicine Hat Regional Hospital', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal", "Carpal Tunnel Release"], address: '666 5 St SW, Medicine Hat, AB T1A 4H6' },
+        { name: 'Brooks Health Centre', procedures: ["Hip Replacement Surgery", "Gall Bladder Removal"], address: '440 3 St E, Brooks, AB T1R 1B3' },
+        { name: 'Chinook Regional Hospital (Lethbridge)', procedures: ["Cataract Surgery 1st Eye Only"], address: '960 19 St S, Lethbridge, AB T1J 1W5' },
       ],
     },
   ];
@@ -173,7 +173,7 @@ const RegionPage = ({ navigation, route }) => {
     const [doctorsList, setDoctorsList] = useState([]);
 
     // Use a dummy procedure for now
-    const dummyProcedure = "Procedure2";
+    const dummyProcedure = "Hip Replacement Surgery";
 
     useEffect(() => {
         // Use the route.params to get procedure passed from previous screen
@@ -235,9 +235,16 @@ const RegionPage = ({ navigation, route }) => {
     };
 
     const handleDoctorPress = (doctor) => {
-        // Navigate to the next page or perform any action on doctor press
-        // For example, navigate to a DoctorDetails page
-        navigation.navigate('UrgencyPage', { doctor });
+        // Navigate to the Urgency page once user selects the clinic & doctor
+        // Pass the procedure, clinic name & address, doctor name
+        const clinicData = clinicsData.find((clinic) => clinic.name === selectedClinic);
+
+        navigation.navigate('UrgencyPage', {
+            procedure: selectedProcedure,
+            clinicName: clinicData.name,
+            clinicAddress: clinicData.address,
+            doctorName: doctor.name,
+        });
     };
 
     return (
