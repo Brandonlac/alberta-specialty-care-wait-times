@@ -148,6 +148,8 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: "bold",
         paddingTop: 20,
+        marginTop: 35,
+        marginBottom: 20,
     },
     searchContainer: {
         borderWidth: 1,

@@ -91,13 +91,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: "100%",
         height: 60,
-        marginTop: 20,
+        marginTop: 55,
+        paddingBottom: 10,
     },
     button: {
         padding: 10,
         alignItems: "center",
-        marginTop: 10,
-        marginBottom: 10,
     },
     selectedButton: {
         backgroundColor: "lightblue",
