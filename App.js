@@ -214,3 +214,25 @@ export default function App() {
   );
 }
 
+const foot = [
+  { label: "Interventions on the Ankle and Foot", value: "Foot" },
+];
+
+const knee = [
+  { label: "Knee Arthroscopy", value: "Knee" },
+  { label: "Knee Replacement Surgery", value: "Knee" },
+  { label: "Other Interventions on the Knee", value: "Knee" },
+];
+
+const genitals = [
+  { label: "Hysterectomy", value: "Vagina" },
+  { label: "Interventions on the Urinary Bladder", value: "Bladder" },
+  { label: "Interventions on the Urinary System", value: "Bladder" },
+  { label: "Interventions on the Vagina", value: "Vagina" },
+  { label: "Muscles and Bones of the Trunk and Pelvis", value: "Pelvis" },
+  { label: "Other Interventions on the Female Genital Tract", value: "Genital" },
+  { label: "Other Interventions on the Male Genital System", value: "Genital" },
+  { label: "Other: Lower Body Blood Vessels", value: "Lower Body" },
+  { label: "Prostate Surgery", value: "Prostate" },
+  { label: "Tubal Ligation for Sterilization", value: "Tubal" },
+];
