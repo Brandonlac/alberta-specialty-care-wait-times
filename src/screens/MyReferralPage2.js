@@ -1,7 +1,22 @@
-const MyReferralPage2 = ({ navigation }) => {
+import React, {useState} from "react";
+import {
+    Modal,
+    View,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    FlatList,
+    StyleSheet,
+    Touchable,
+} from "react-native";
+
+const MyReferralPage2 = ({ route }) => {
+    const {year, name} = route.params;
+
     return (
         <View style={styles.container}>
-            <Text style={styles.bigText}>This is the second page of the referral.</Text>
+            <Text style={styles.bigText}>Year: {year}</Text>
+            <Text style={styles.bigText}>Name: {name}</Text>
         </View>
     );
 };

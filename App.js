@@ -163,6 +163,7 @@ import MyReferralPage from "./src/screens/MyReferralPage";
 import RegionPage from "./src/screens/RegionPage";
 import UrgencyPage from "./src/screens/UrgencyPage";
 import SpecialistPage from "./src/screens/SpecialistPage"
+import MyReferralPage2 from "./src/screens/MyReferralPage2";
 
 const Stack = createStackNavigator();
 
@@ -208,6 +209,13 @@ export default function App() {
           component={MyReferralPage}
           options={{
             title: "My Referral",
+          }}
+        />
+        <Stack.Screen
+          name="MyReferralPage2"
+          component={MyReferralPage2}
+          options={{
+            title: "My Referral2",
           }}
         />
         <Stack.Screen
