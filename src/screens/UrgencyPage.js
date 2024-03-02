@@ -1,9 +1,8 @@
 //UrgencyPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from '@react-native-community/slider';
 import Checkbox from 'expo-checkbox';
 import { useNavigation } from '@react-navigation/native';
-import { Picker } from '@react-native-picker/picker';
 
 
 import {
@@ -19,7 +18,7 @@ import {
 
 const { width } = Dimensions.get('window');
 
-const SliderWithCustomRadioButtons = () => {
+const SliderWithCustomRadioButtons = ({ route }) => {
     const navigation = useNavigation();
     const [sliderValue, setSliderValue] = useState(5);
     const [selectedValue, setSelectedValue] = useState('5');
@@ -39,6 +38,13 @@ const SliderWithCustomRadioButtons = () => {
     const handleRadioChange = (value) => {
         setSelectedValue(value);
         setSliderValue(parseInt(value, 10));
+    };
+    const handleNextPress = () => {
+        navigation.navigate("SpecialistPage", {
+            ...route.params, // Spread the previous params
+            sliderValue,            // Add new params
+            emergencyChecked
+        });
     };
 
     return (
@@ -86,7 +92,7 @@ const SliderWithCustomRadioButtons = () => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.button} // Make sure to define this style
-                    onPress={() => navigation.navigate("SpecialistPage")}
+                    onPress={handleNextPress}
                 >
                     <Text>Next</Text>
                 </TouchableOpacity>
@@ -95,13 +101,26 @@ const SliderWithCustomRadioButtons = () => {
     );
 };
 
-const UrgencyPage = ({ navigation }) => {
+
+const UrgencyPage = ({ route }) => {
+
+    useEffect(() => {
+        // Log the parameters to the console when the component mounts
+        console.log('Procedure:', route.params.procedure);
+        console.log('Clinic Name:', route.params.clinicName);
+        console.log('Clinic Address:', route.params.clinicAddress);
+        console.log('Doctor Name:', route.params.doctorName);
+    }, []); // Empty dependency array ensures that this effect runs only once when the component mounts
+
     return (
         <View style={styles.container}>
-            <SliderWithCustomRadioButtons />
+            <SliderWithCustomRadioButtons route={route} />
         </View>
     );
 };
+
+
+
 
 export default UrgencyPage;
 // Styles for UrgencyPage
