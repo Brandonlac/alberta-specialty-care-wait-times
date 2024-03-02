@@ -12,6 +12,12 @@ import {
 } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialIcons'; // Import Icon
 
+const referrals = [
+    { year: "2021", name: "Dr. Meredith Grey" },
+    { year: "2022", name: "Dr. Derek Shepherd" },
+    { year: "2023", name: "Dr. Cristina Yang" },
+    { year: "2024", name: "Dr. Miranda Bailey" },
+];
 
 const MyReferralPage = ({ navigation }) => {
 const [startYear, setStartYear] = useState("2020");
@@ -20,7 +26,9 @@ const [isStartYearModalVisible, setIsStartYearModalVisible] = useState(false);
 const [isEndYearModalVisible, setIsEndYearModalVisible] = useState(false);
 const [years, setYears] = useState(Array.from({ length: new Date().getFullYear() - 1999 }, (_, i) => `${i + 2000}`));
 
-// const [endYear, setEndYear] = useState("2025");
+// filter referrals based on selected start and end year
+const filteredReferrals = referrals.filter(referral =>
+    referral.year >= parseInt(startYear) && referral.year <= parseInt(endYear));
 
 const selectStartYear = (year) => {
     setStartYear(year);
@@ -68,6 +76,14 @@ const selectEndYear = (year) => {
                 />
             </Modal>
 
+            <FlatList
+                data={filteredReferrals}
+                keyExtractor={(item, index) => item.name + index}
+                renderItem={({ item }) => (
+                    <Text style={styles.referralItem}>Your Referral for {item.year}: Given by {item.name}</Text>
+                )}
+            />
+
         </View>
     );
 };
@@ -98,6 +114,10 @@ const styles = StyleSheet.create({
         padding:10,
         fontSize:18,
     },
+    referralItem:{
+        padding:10,
+        fontSize:18,
+    }
 });
 
 export default MyReferralPage;
