@@ -40,7 +40,7 @@ const SliderWithCustomRadioButtons = () => {
     };
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.container_urgency}>
             <Header />
             <Text style={styles.bigText}>Please rate your urgency from 1-10.</Text>
             <Slider
@@ -80,6 +80,13 @@ const SliderWithCustomRadioButtons = () => {
     );
 };
 const styles = StyleSheet.create({
+    container_urgency: {
+        flex: 1,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // Add padding
+        backgroundColor: 'lightblue'
+    },
     container: {
         flex: 1,
         backgroundColor: "#fff",
