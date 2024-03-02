@@ -18,6 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import ProcedurePage from "./ProcedurePage";
+import UrgencyPage from "./UrgencyPage";
 
 const LandingPage = ({ navigation }) => {
     return (
@@ -61,7 +62,9 @@ const LandingPage = ({ navigation }) => {
                 <TouchableOpacity style={styles.button}>
                     <FontAwesomeIcon icon={faX} size={30} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate("UrgencyPage")}
+                    style={styles.button}>
                     <FontAwesomeIcon icon={faX} size={30} />
                 </TouchableOpacity>
             </View>
