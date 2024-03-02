@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { View, Button, StyleSheet, Alert } from 'react-native';
 
-const SpecialtyCareScreen = ({ doctorsList }) => {
-  const [selectedProcedure, setSelectedProcedure] = useState('');
+const SpecialtyCareScreen = ({ route }) => {
+  const { doctorsData } = route.params;
 
   const handleCheckWaitingTime = () => {
     const waitingTime = calculateWaitingTime();
-    const specialist = doctorsList.length > 0 ? doctorsList[0] : null;
-
-    if (specialist) {
+    if (doctorsData && doctorsData.length > 0) {
+      const specialistName = doctor.name;
       Alert.alert(
-        `Doctor: ${specialist.name}`,
+        `Doctor: ${specialistName}`,
         `Procedure: ${selectedProcedure}\nWaiting time: ${waitingTime}`
       );
     }

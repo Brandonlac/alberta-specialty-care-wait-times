@@ -11,6 +11,7 @@ import Map from "../components/Map";
 import DoctorsList from "../components/DoctorsList";
 import { Picker } from "@react-native-picker/picker";
 
+
 // Hard-coded data
 
 const zonesData = [
@@ -160,6 +161,7 @@ const doctorsData = [
             'Brooks Health Centre'
         ]
     },
+    
 ];
 
 
@@ -185,7 +187,12 @@ const RegionPage = ({ navigation, route }) => {
           filterZonesByProcedure(procedure);
         }
     }, [route.params?.selectedProcedure]);
-    
+
+    // allowing us to pass doctorsData to SpecialtyCareScreen
+    const handleNavigateToSpecialtyCare = () => {
+        navigation.navigate('SpecialtyCareScreen', { doctorsData });
+    };
+      
     const filterZonesByProcedure = (procedure) => {
 
         // Filter zones based on the selected procedure
