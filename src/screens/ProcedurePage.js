@@ -45,6 +45,11 @@ const Procedure = ({ navigation }) => {
     const handleSelect = (value) => {
         setSelectedProcedure(value);
         setShowDropdown(false);
+
+        // Navigate ot Region page, pass selected procedure
+        navigation.navigate('RegionPage', {
+            procedure: value,
+        });
     };
 
     const handleCirclePress = (position, index) => {
