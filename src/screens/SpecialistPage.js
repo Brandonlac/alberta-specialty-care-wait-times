@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, Picker, Button, StyleSheet } from 'react-native';
-
+import { View, Text, Button, StyleSheet } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 const SpecialtyCareScreen = () => {
   const [selectedProcedure, setSelectedProcedure] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
@@ -44,15 +44,15 @@ const SpecialtyCareScreen = () => {
   };
 
   const calculateWaitingTime = () => {
-    const specialist = 'Dr. ABCD'; 
+    const specialist = 'Dr. ABCD';
 
     if (selectedUrgency === 'semi-urgent') {
       return specialists[specialist].semiUrgent;
-    } 
+    }
 
     else if (selectedUrgency === 'urgent') {
       return specialists[specialist].urgent;
-    } 
+    }
 
     else {
       return specialists[specialist].nonUrgent;
