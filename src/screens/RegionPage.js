@@ -175,12 +175,13 @@ const RegionPage = ({ navigation, route }) => {
     const [doctorsList, setDoctorsList] = useState([]);
 
     // Use a dummy procedure for now
-    const dummyProcedure = "Hip Replacement Surgery";
+    //const dummyProcedure = "Hip Replacement Surgery";
 
     useEffect(() => {
         // Use the route.params to get procedure passed from previous screen
         // Remove dummyProcedure once integrated with previous screen
-        const procedure = route.params?.selectedProcedure || dummyProcedure;
+        const procedure = route.params?.procedure;
+        console.log(procedure);
     
         if (procedure) {
           setSelectedProcedure(procedure);
