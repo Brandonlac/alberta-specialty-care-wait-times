@@ -1,4 +1,4 @@
-// ProcedurePage.js
+// ReferralPage.js
 import React from "react";
 import {
     View,
@@ -8,19 +8,17 @@ import {
     StyleSheet,
 } from "react-native";
 
-import Procedure from "../components/Procedure";
 
-const ProcedurePage = ({ navigation }) => {
+const MyReferralPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Procedure />
         </View>
     );
 };
 
-// Styles for ProcedurePage
+// Styles for MyReferralPage
 
-export default ProcedurePage;
+export default MyReferralPage;
 
 const styles = StyleSheet.create({
     container: {

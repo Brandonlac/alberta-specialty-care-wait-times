@@ -1,4 +1,4 @@
-// ProcedurePage.js
+//UrgencyPage.js
 import React from "react";
 import {
     View,
@@ -8,19 +8,16 @@ import {
     StyleSheet,
 } from "react-native";
 
-import Procedure from "../components/Procedure";
-
-const ProcedurePage = ({ navigation }) => {
+const UrgencyPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Procedure />
         </View>
     );
 };
 
-// Styles for ProcedurePage
+// Styles for UrgencyPage
 
-export default ProcedurePage;
+export default UrgencyPage;
 
 const styles = StyleSheet.create({
     container: {
